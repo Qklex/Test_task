@@ -1,0 +1,2 @@
+SELECT c.last_name,c.first_name,c.father_name,count(*) as orders_count,sum(cl.price * o.day) price_sum from c##my.clients c join C##my.ORDERS_LIST o on c.id = o.client_id join C##my.cars_list cl on cl.id = o.car_id
+GROUP BY c.first_name,c.last_name,c.father_name
